@@ -6,11 +6,11 @@ const moon=document.querySelector(".fixed-icon");
 const setTheme=()=>{
   switch(theme){
     case 'dark':
-      lightMode();
+      darkMode();
       theme="light";
       break;
     case 'light':
-      darkMode();
+      lightMode();
       theme="dark";
       break;
   }
