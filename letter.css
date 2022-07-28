@@ -10,7 +10,7 @@ body {
 .title-new{
   font-family: "Montserrat", sans-serif;
   color: white;
-  background: url("https://thumbs.dreamstime.com/b/tropical-flower-pattern-seamless-flowers-blossom-flowers-nature-background-vector-illustration-61142748.jpg");
+  background: url("https://images.unsplash.com/photo-1558470598-a5dda9640f68?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80");
   background-size: auto 200%;
   background-clip: text;
   text-fill-color: transparent;
@@ -26,6 +26,6 @@ h1:nth-child(2) {
     background-position: center 0;
   }
   to {
-    background-position: center 200%;
+    background-position: center 300%;
   }
 }
