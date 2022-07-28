@@ -1,6 +1,7 @@
 let theme = "dark";
 const buttons=document.querySelectorAll(".social-button");
-const titles=document.querySelectorAll(".title");
+const title=document.querySelector(".title");
+const subtitle=document.querySelector(".subtitle");
 const moon=document.querySelector(".fixed-icon");
 const setTheme=()=>{
   switch(theme){
@@ -19,14 +20,13 @@ const darkMode=()=>{
   moon.classList.add('active');
   moon.classList.remove('toggle-icon')
   for(let i=0;i<buttons.length;i++){
-    buttons[i].classList.add('dark-button')
-    buttons[i].classList.remove('light-button')
+    buttons[i].classList.add('light-button')
+    buttons[i].classList.remove('dark-button')
   }
-  for(let j=0;j<titles.length;j++){
-    titles[j].classList.add("title-new");
-  }
+  title.classList.add("title-new");
+  subtitle.classList.add("title-new")
   VANTA.FOG({
-    el: "#root",
+    el: "body",
     mouseControls: true,
     touchControls: true,
     gyroControls: false,
@@ -45,14 +45,13 @@ const lightMode=()=>{
   moon.classList.remove('active');
   moon.classList.add('toggle-icon');
   for(let i=0;i<buttons.length;i++){
-    buttons[i].classList.remove('dark-button')
-    buttons[i].classList.add('light-button')
+    buttons[i].classList.remove('light-button')
+    buttons[i].classList.add('dark-button')
   }
-  for(let j=0;j<titles.length;j++){
-    titles[j].classList.remove("title-new");
-  }
+  title.classList.remove("title-new");
+  subtitle.classList.remove("title-new")
   VANTA.FOG({
-    el: "#root",
+    el: "body",
     mouseControls: true,
     touchControls: true,
     gyroControls: false,
