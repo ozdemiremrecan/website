@@ -1,0 +1,112 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#root{
+  width: 100vw;
+  height: 100vh;
+}
+.title{
+  display:flex;
+  justify-content:center;
+  text-align: center;
+  align-items: center;
+}
+.social-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 10%;
+  justify-content: center;
+}
+.social-buttons__button {
+  margin: 10px 5px 0;
+}
+
+.social-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  width: 70px;
+  height: 70px;
+  text-decoration: none;
+  border-radius: 100%;
+  background: #fff;
+  text-align: center;
+}
+.social-button::after {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  display: block;
+  width: 0;
+  height: 0;
+  border-radius: 100%;
+  transition: 0.3s;
+}
+.social-button:focus, .social-button:hover {
+  color: #fff;
+}
+.social-button:focus::after, .social-button:hover::after {
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  margin-left: calc(-50% - 1px);
+}
+.social-button i{
+  position: relative;
+  z-index: 1;
+  transition: 0.3s;
+}
+.social-button i {
+  font-size: 28px;
+}
+
+.fixed-icon{
+  width: 50px;
+  height: 50px;
+  border-radius: 40px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  font-size: 20px;
+}
+.toggle-icon{
+  color: white;
+  background-color: black;
+  border: 2px solid black;
+}
+.toggle-icon:hover{
+  background-color: #212121;
+  transition: 1s;
+}
+.active{
+  background-color: #F0EBE3;
+  border: 2px solid #F0EBE3;
+  color: goldenrod;
+}
+.active:hover{
+  background-color: #f1f1f1;
+  transition: 1s;
+}
+
+.dark-button{
+  background-color: black;
+  color: white
+}
+.dark-button:hover{
+  color: black;
+  background-color: white;
+}
+.light-button{
+  background-color: white;
+  color: black;
+}
+.light-button:hover{
+  color:white;
+  background-color: black;
+}
