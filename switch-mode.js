@@ -23,8 +23,8 @@ const darkMode=()=>{
     buttons[i].classList.add('light-button')
     buttons[i].classList.remove('dark-button')
   }
-  title.style.color='white';
-  subtitle.classList.add("title-new")
+  title.classList.add("beyaz")
+  subtitle.classList.add("beyaz")
   VANTA.FOG({
     el: "body",
     mouseControls: true,
@@ -48,8 +48,8 @@ const lightMode=()=>{
     buttons[i].classList.remove('light-button')
     buttons[i].classList.add('dark-button')
   }
-  title.style.color='black';
-  subtitle.classList.remove("title-new")
+  title.classList.remove("beyaz")
+  subtitle.classList.remove("beyaz")
   VANTA.FOG({
     el: "body",
     mouseControls: true,
