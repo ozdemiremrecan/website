@@ -17,8 +17,12 @@
 .social-buttons {
   display: flex;
   flex-wrap: wrap;
-  padding-top: 10%;
+  padding-top: 8%;
   justify-content: center;
+  transform: scale(0.94);
+  animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+  opacity: 0;
+  filter: blur(4px);
 }
 .social-buttons__button {
   margin: 10px 5px 0;
@@ -102,7 +106,7 @@
 .dark-button:hover{
   color: black;
   background-color: white;
-  transition:0.3s;
+  transition: 0.3s;
 }
 .light-button{
   background-color: white;
@@ -111,7 +115,7 @@
 .light-button:hover{
   color:white;
   background-color: black;
-  transition:0.3s;
+  transition: 0.3s;
 }
 @media screen and (max-width:768px){
   #root{
@@ -135,7 +139,11 @@ h1:nth-child(1){
   animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 h2:nth-child(1) {
-  animation: fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  animation: fade-in 0.8s 0.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+.social-buttons{
+  animation: fade-in 0.8s 1.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+
 }
 @keyframes fade-in {
   100% {
@@ -144,5 +152,5 @@ h2:nth-child(1) {
   }
 }
 .beyaz{
-   color:white;
+  color: white;
 }
