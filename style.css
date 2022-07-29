@@ -102,6 +102,7 @@
 .dark-button:hover{
   color: black;
   background-color: white;
+  transition:0.3s;
 }
 .light-button{
   background-color: white;
@@ -110,6 +111,7 @@
 .light-button:hover{
   color:white;
   background-color: black;
+  transition:0.3s;
 }
 @media screen and (max-width:768px){
   #root{
