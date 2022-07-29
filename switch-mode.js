@@ -23,7 +23,7 @@ const darkMode=()=>{
     buttons[i].classList.add('light-button')
     buttons[i].classList.remove('dark-button')
   }
-  title.classList.add("title-new");
+  title.style.color='white';
   subtitle.classList.add("title-new")
   VANTA.FOG({
     el: "body",
@@ -48,7 +48,7 @@ const lightMode=()=>{
     buttons[i].classList.remove('light-button')
     buttons[i].classList.add('dark-button')
   }
-  title.classList.remove("title-new");
+  title.style.color='black';
   subtitle.classList.remove("title-new")
   VANTA.FOG({
     el: "body",
