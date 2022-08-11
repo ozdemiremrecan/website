@@ -7,12 +7,37 @@
   width: 100vw;
   height: 100vh;
 }
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 .title,
 .subtitle{
   display:flex;
   justify-content:center;
   text-align: center;
   align-items: center;
+  color:white;
+  font-family: 'Indie Flower', cursive;
+}
+.title h1{
+  font-size: 60px;
+  font-family: 'Indie Flower', cursive;
 }
 .social-buttons {
   display: flex;
@@ -37,8 +62,9 @@
   height: 70px;
   text-decoration: none;
   border-radius: 100%;
-  background: #fff;
   text-align: center;
+  border: 2px solid white;
+  color: white;
 }
 .social-button::after {
   content: "";
@@ -51,7 +77,7 @@
   border-radius: 100%;
   transition: 0.3s;
 }
-.social-button:focus, .social-button:hover {
+.social-button:focus{
   color: #fff;
 }
 .social-button:focus::after, .social-button:hover::after {
@@ -98,15 +124,6 @@
   transition: 1s;
 }
 
-.dark-button{
-  background-color: black;
-  color: white
-}
-.dark-button:hover{
-  color: black;
-  background-color: white;
-  transition: 0.3s;
-}
 .light-button{
   background-color: white;
   color: black;
@@ -152,4 +169,8 @@ h2:nth-child(1) {
 }
 .beyaz{
   color: white;
+}
+.social-button:hover{
+  color: black;
+  background-color: white;
 }
