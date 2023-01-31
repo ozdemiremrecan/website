@@ -1,0 +1,1 @@
+export const loginAddress='0x04Bb68418f1BC3D279d8B82660C39c7fAd0B4A42';
