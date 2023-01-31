@@ -1,0 +1,176 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#root{
+  width: 100vw;
+  height: 100vh;
+}
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.title,
+.subtitle{
+  display:flex;
+  justify-content:center;
+  text-align: center;
+  align-items: center;
+  color:white;
+  font-family: 'Indie Flower', cursive;
+}
+.title h1{
+  font-size: 60px;
+  font-family: 'Indie Flower', cursive;
+}
+.social-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 8%;
+  justify-content: center;
+  animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+  opacity: 0;
+  filter: blur(4px);
+}
+.social-buttons__button {
+  margin: 10px 5px 0;
+}
+
+.social-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  width: 70px;
+  height: 70px;
+  text-decoration: none;
+  border-radius: 100%;
+  text-align: center;
+  border: 2px solid white;
+  color: white;
+}
+.social-button::after {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  display: block;
+  width: 0;
+  height: 0;
+  border-radius: 100%;
+  transition: 0.3s;
+}
+.social-button:focus{
+  color: #fff;
+}
+.social-button:focus::after, .social-button:hover::after {
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  margin-left: calc(-50% - 1px);
+}
+.social-button i{
+  position: relative;
+  z-index: 1;
+  transition: 0.3s;
+}
+.social-button i {
+  font-size: 28px;
+}
+
+.fixed-icon{
+  width: 50px;
+  height: 50px;
+  border-radius: 40px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  font-size: 20px;
+}
+.toggle-icon{
+  color: white;
+  background-color: black;
+  border: 2px solid black;
+}
+.toggle-icon:hover{
+  background-color: #212121;
+  transition: 1s;
+}
+.active{
+  background-color: #F0EBE3;
+  border: 2px solid #F0EBE3;
+  color: goldenrod;
+}
+.active:hover{
+  background-color: #f1f1f1;
+  transition: 1s;
+}
+
+.light-button{
+  background-color: white;
+  color: black;
+}
+.light-button:hover{
+  color:white;
+  background-color: black;
+  transition: 0.3s;
+}
+@media screen and (max-width:768px){
+  #root{
+    display: block;
+    padding-top: 30%;
+  }
+}
+h1,h2 {
+  font-family: "Montserrat Medium";
+  transform: scale(0.94);
+  animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+  opacity: 0;
+  filter: blur(4px);
+}
+@keyframes scale {
+  100% {
+    transform: scale(1);
+  }
+}
+h1:nth-child(1){
+  animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+h2:nth-child(1) {
+  animation: fade-in 0.8s 0.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+.social-buttons{
+  animation: fade-in 0.8s 1.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+
+}
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+.beyaz{
+  color: white;
+}
+.social-button:hover{
+  color: black;
+  background-color: white;
+}
